@@ -1,0 +1,55 @@
+{
+  "name": "@dilix/rent-control-engine",
+  "version": "0.1.0",
+  "description": "Resolve the maximum legal annual rent increase for any California property — local ordinance + AB-1482 statewide fallback + Costa-Hawkins exemption logic + multi-year NOI projection. 32 CA jurisdictions encoded with citations.",
+  "license": "MIT",
+  "author": "Dilix (Ownership Theory)",
+  "homepage": "https://dilix.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erica-ownershiptheory/dilix-rent-control-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/erica-ownershiptheory/dilix-rent-control-engine/issues"
+  },
+  "keywords": [
+    "rent-control",
+    "california",
+    "ab-1482",
+    "costa-hawkins",
+    "cre",
+    "real-estate",
+    "underwriting",
+    "regulation",
+    "compliance"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^3.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
