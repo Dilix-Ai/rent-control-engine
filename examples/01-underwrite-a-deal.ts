@@ -39,8 +39,13 @@ const projection = projectRentCapImpact(
 
 console.log(`Year-1 base GRI: $300,000`);
 projection.projections.forEach((y) => {
+  // capPct is null after the published period — the engine falls
+  // through to market growth rather than guessing a future cap.
+  // See README's "Limitations and known gaps".
+  const capLabel =
+    y.capPct == null ? "n/a (post-published)" : `${y.capPct}%`;
   console.log(
-    `Year ${y.year}: cap=${y.capPct}% · ` +
+    `Year ${y.year}: cap=${capLabel} · ` +
       `cap-rent $${y.capProjectedRent.toLocaleString()} vs. ` +
       `market $${y.unrestrictedProjectedRent.toLocaleString()} · ` +
       `drag $${y.drag.toLocaleString()}`,

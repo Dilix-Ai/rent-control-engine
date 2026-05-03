@@ -145,7 +145,7 @@ Verifiable code IS the moat. Customers underwriting deals on top of regulatory m
 Today: back-calculated from the CAA chart's published cap percentages for internal consistency. Tomorrow: BLS authoritative readings refreshed quarterly. We document the source on every reading via the `source` field. See [ADR-3](./docs/architecture-decisions.md).
 
 **Why is Oakland's cap so much lower than San Francisco's?**
-Because Oakland's ordinance computes the cap as 60% of regional CPI, with a floor of 3%, while SF's computes it as 60% of regional CPI without a floor — and in 2025, the regional CPI fell to 1.33%. Oakland's cap floored at 3% would normally apply, but the chart shows a published 0.8% — meaning Oakland's specific application math differs from SF's even with the same input CPI. The engine encodes both exactly per CAA.
+Both ordinances tie their cap to the SF-Oakland-Hayward regional CPI, but the application math differs (Oakland's CAA-published rate this period is 0.8%; SF's is 1.6%). The engine encodes both exactly per CAA — see [`src/ordinances.ts`](./src/ordinances.ts) for the literal computation per jurisdiction.
 
 **Will this work for New York / New Jersey / Oregon?**
 Not yet. v0.1 is California-only. Out-of-state addresses return `source: "no_local_rule_no_ab1482"` with a warning. NY rent stabilization is on the roadmap (see [ADR-4](./docs/architecture-decisions.md)). NY in particular requires DHCR registration data that isn't trivial to ship.
@@ -160,6 +160,7 @@ We document these so you can decide what's safe to underwrite on top of.
 - **Year-only date matching for `builtBefore` cutoffs.** A 1979 SF property built before 6/13/79 should be SF-covered, but our resolver flags 1979 as exempt because year ≥ 1979. Affects ~5% of borderline-year buildings. ([ADR-2](./docs/architecture-decisions.md))
 - **Santa Monica $-cap not modeled.** Santa Monica caps the absolute monthly increase ($60-$76 per period) in addition to the % cap. Only the % is computed. High-end rents may be more constrained by the dollar cap.
 - **Unincorporated LA County sub-tiers.** General tier resolved; small-property-landlord (+1%) and luxury-unit (+2%) sub-tiers require property metadata not yet exposed in the input.
+- **Projections beyond the published period fall through to market growth.** `projectRentCapImpact` resolves a cap for each future year. When the future date lies past the ordinance's published cap window (typical published-periods ordinances like Oakland), the cap returns `null` and the projection grows the cap-rent at the market assumption. The cumulative drag is therefore *the floor*, not a worst-case — re-published caps are likely to compress growth further. For conservative underwriting, call `resolveRentCap` with the current period and apply that cap flat across the hold.
 - **California only.**
 
 See [CHANGELOG.md](./CHANGELOG.md) for the full feature/limitation tracker.

@@ -40,17 +40,17 @@ screened
 //   0.8%   Lakeshore 12-plex (Oakland)
 //          local_ordinance · Oakland Code of Ordinances §8.22.010 et seq.
 //
-//   1.4%   Mission St 4-plex (SF)
-//          local_ordinance · San Francisco Administrative Code §37.1
+//   1.6%   Mission St 4-plex (SF)
+//          local_ordinance · SF Administrative Code §37.1 et seq.; Costa-Hawkins §1954.52
 //
 //   3.0%   Crenshaw 8-unit (LA)
-//          local_ordinance · LA Municipal Code §§151.00 - 155.09
+//          local_ordinance · LA Municipal Code §§151.00 - 155.09 (amended 12/2025)
+//
+//   6.3%   Burlingame duplex
+//          ab1482_statewide · Cal. Civ. Code §1947.12
 //
 //   6.3%   Foster City 10-plex
-//          ab1482_statewide · Civ. Code §1947.12
-//
-//   EXEMPT Burlingame duplex
-//          exempt_costa_hawkins · Civ. Code §1954.52
+//          ab1482_statewide · Cal. Civ. Code §1947.12
 //
 // The top of the list is where the underwriter's growth assumptions
 // will be most wrong. The Oakland building's 0.8% cap vs. a 4% market
