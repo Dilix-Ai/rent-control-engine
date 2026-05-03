@@ -24,15 +24,15 @@ import type {
   CapFormula,
   EligibilityFilter,
   CPIRegion,
-} from "./types";
-import { findOrdinance } from "./ordinances";
+} from "./types.js";
+import { findOrdinance } from "./ordinances.js";
 import {
   AB1482_ORDINANCE,
   AB1482_FLAT_COMPONENT_PCT,
   AB1482_MAX_CAP_PCT,
   ab1482EligibilityAsOf,
-} from "./ab1482";
-import { getCPIReading, getCPIRegionForCounty } from "./cpiRegions";
+} from "./ab1482.js";
+import { getCPIReading, getCPIRegionForCounty } from "./cpiRegions.js";
 
 // ─── Public API ──────────────────────────────────────────────────────
 

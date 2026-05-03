@@ -60,7 +60,15 @@ This engine handles all of them. By design, in code, MIT-licensed.
 npm install @dilix/rent-control-engine
 ```
 
-Requires Node 18+. ESM-only.
+Requires Node 18+. Ships both ESM and CommonJS — works in Vite, Webpack, esbuild, plain Node ESM, and Lambda/Cloud-Functions runtimes that haven't migrated to ESM.
+
+```ts
+// ESM
+import { resolveRentCap } from "@dilix/rent-control-engine";
+
+// CommonJS
+const { resolveRentCap } = require("@dilix/rent-control-engine");
+```
 
 ## Usage
 

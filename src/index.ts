@@ -18,14 +18,14 @@ export type {
   PropertyType,
   CapSource,
   Confidence,
-} from "./types";
+} from "./types.js";
 
 export {
   resolveRentCap,
   projectRentCapImpact,
   type RentCapProjection,
-} from "./resolver";
+} from "./resolver.js";
 
-export { ORDINANCES, findOrdinance } from "./ordinances";
-export { AB1482_ORDINANCE } from "./ab1482";
-export { CPI_READINGS, getCPIReading, getCPIRegionForCounty } from "./cpiRegions";
+export { ORDINANCES, findOrdinance } from "./ordinances.js";
+export { AB1482_ORDINANCE } from "./ab1482.js";
+export { CPI_READINGS, getCPIReading, getCPIRegionForCounty } from "./cpiRegions.js";

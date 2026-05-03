@@ -11,7 +11,7 @@
  * refreshing, reconcile against the next CAA chart update.
  */
 
-import type { CPIReading, CPIRegion } from "./types";
+import type { CPIReading, CPIRegion } from "./types.js";
 
 /** April-to-April CPI readings — the source month AB-1482 references. */
 export const CPI_READINGS: CPIReading[] = [

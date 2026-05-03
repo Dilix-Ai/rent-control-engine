@@ -16,7 +16,7 @@
  * local ordinance.
  */
 
-import type { RentControlOrdinance, EligibilityFilter } from "./types";
+import type { RentControlOrdinance, EligibilityFilter } from "./types.js";
 
 export const AB1482_MAX_CAP_PCT = 10;
 export const AB1482_FLAT_COMPONENT_PCT = 5;

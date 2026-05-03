@@ -24,7 +24,7 @@
  * the $-amount than the %.
  */
 
-import type { RentControlOrdinance } from "./types";
+import type { RentControlOrdinance } from "./types.js";
 
 export const ORDINANCES: RentControlOrdinance[] = [
   // ── San Francisco ──────────────────────────────────────────────────
