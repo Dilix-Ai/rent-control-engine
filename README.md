@@ -4,7 +4,7 @@ Resolve the maximum legal annual rent increase for any California property — l
 
 [![npm version](https://img.shields.io/npm/v/@dilix/rent-control-engine.svg?color=informational)](https://www.npmjs.com/package/@dilix/rent-control-engine)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![CI](https://github.com/erica-ownershiptheory/dilix-rent-control-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/erica-ownershiptheory/dilix-rent-control-engine/actions)
+[![CI](https://github.com/dilix-ai/rent-control-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/dilix-ai/rent-control-engine/actions)
 [![Tests](https://img.shields.io/badge/tests-37%20passing-brightgreen)](./test)
 
 Built and maintained by [Dilix](https://dilix.ai) — the NOI defense layer for CRE.
@@ -159,7 +159,7 @@ Both ordinances tie their cap to the SF-Oakland-Hayward regional CPI, but the ap
 Not yet. v0.1 is California-only. Out-of-state addresses return `source: "no_local_rule_no_ab1482"` with a warning. NY rent stabilization is on the roadmap (see [ADR-4](./docs/architecture-decisions.md)). NY in particular requires DHCR registration data that isn't trivial to ship.
 
 **An ordinance changed last week. How fast can I get the update?**
-Open a [data correction issue](https://github.com/erica-ownershiptheory/dilix-rent-control-engine/issues/new?template=data_correction.yml) with an authoritative source link. Most data corrections ship within 48 hours.
+Open a [data correction issue](https://github.com/dilix-ai/rent-control-engine/issues/new?template=data_correction.yml) with an authoritative source link. Most data corrections ship within 48 hours.
 
 ## Limitations and known gaps
 
@@ -217,6 +217,6 @@ MIT — see [LICENSE](./LICENSE).
 
 I'm a CRE professional who got tired of underwriting models that assume 3-4% rent growth on properties that legally can't grow rents above 1%. The gap compounds. The exit-value haircut on a 5-year hold can swing six figures.
 
-So this engine exists. It's the math nobody else publishes, written deterministically, audit-ready by default. If you find an ordinance that's wrong or a citation that's broken, [open an issue](https://github.com/erica-ownershiptheory/dilix-rent-control-engine/issues) — keeping it accurate is the whole point.
+So this engine exists. It's the math nobody else publishes, written deterministically, audit-ready by default. If you find an ordinance that's wrong or a citation that's broken, [open an issue](https://github.com/dilix-ai/rent-control-engine/issues) — keeping it accurate is the whole point.
 
 — [Erica Walters](https://github.com/erica-ownershiptheory), founder, Dilix · [dilix.ai](https://dilix.ai)

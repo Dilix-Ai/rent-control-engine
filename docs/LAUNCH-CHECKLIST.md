@@ -6,25 +6,20 @@ the org-name decision is made.
 
 > Status as of 2026-05-03: code, tests, docs, examples, CI workflow
 > all ready. Branch is `main`. 37 tests passing locally.
+> GitHub org `dilix-ai` and npm scope `@dilix` decided + claimed.
 
-## Pre-launch decision (founder)
+## Pre-launch decision (founder) — DONE
 
-- [ ] **GitHub org name.** Options (in preference order):
-  - `dilix` — primary; check availability at https://github.com/dilix
-  - `dilix-ai` — fallback if `dilix` is taken
-  - `ownership-theory` — fallback if both taken
-- [ ] **npm scope.** `@dilix` (claim at https://www.npmjs.com/package/-/v1/login),
-  fallback `@dilix-ai`. Must match GitHub org for clean cross-link.
-- [ ] **Public-vs-private confirmation.** Repo intended public. License
-  is MIT in `LICENSE`.
+- [x] **GitHub org name:** `dilix-ai` (created 2026-05-03 — `dilix` was squatted).
+- [x] **npm scope:** `@dilix` (zero existing packages — claimable on first publish).
+- [x] **Public-vs-private confirmation:** Public, MIT-licensed.
 
-## Step 1 — GitHub org + repo
+## Step 1 — GitHub repo (org already exists)
 
-- [ ] Create org at https://github.com/organizations/new → **Free** plan.
-- [ ] Create repo `<org>/dilix-rent-control-engine` → **Public**, no README/license/.gitignore (we have all three).
+- [ ] Create repo `dilix-ai/rent-control-engine` → **Public**, no README/license/.gitignore (we have all three).
 - [ ] In repo Settings → enable Issues, Discussions, Projects.
 - [ ] In repo Settings → Pages → keep disabled (we don't need it).
-- [ ] In repo Settings → Branches → add a branch protection rule on `main`:
+- [ ] In repo Settings → Branches → add a branch protection rule on `main` (after first push):
   - Require PR before merging
   - Require status checks (`test (18)`, `test (20)`, `test (22)`)
   - Allow force pushes from admins only
@@ -33,7 +28,7 @@ the org-name decision is made.
 
 ```bash
 cd ~/dilix-rent-control-engine
-git remote add origin git@github.com:<org>/dilix-rent-control-engine.git
+git remote add origin git@github.com:dilix-ai/rent-control-engine.git
 git push -u origin main
 ```
 
@@ -42,21 +37,9 @@ Verify on github.com:
 - [ ] CI runs on the push (Actions tab → green)
 - [ ] License recognized as MIT (right sidebar)
 
-## Step 3 — Update package.json with the real org
+## Step 3 — Verify package.json points at the right org — DONE
 
-Currently package.json points at `erica-ownershiptheory`. Update both fields once the GitHub org is chosen:
-
-```json
-"repository": {
-  "type": "git",
-  "url": "git+https://github.com/<org>/dilix-rent-control-engine.git"
-},
-"bugs": {
-  "url": "https://github.com/<org>/dilix-rent-control-engine/issues"
-}
-```
-
-Commit + push.
+- [x] `repository.url`, `bugs.url`, README badge, SECURITY/CONTRIBUTING all updated to `dilix-ai/rent-control-engine` in the same commit as the remote add (2026-05-03).
 
 ## Step 4 — Claim the npm scope
 
@@ -88,8 +71,7 @@ Then on GitHub → Releases → Draft a new release:
 ## Step 6 — Cross-link in the main Dilix product
 
 In `~/ot-dealanalysis`:
-- [ ] Update `README.md` line 41 to link to the public repo URL (currently points at `erica-ownershiptheory/dilix-rent-control-engine`)
-- [ ] Update `AGENTS.md` line 32 likewise
+- [ ] Update any references from `erica-ownershiptheory/dilix-rent-control-engine` → `dilix-ai/rent-control-engine` (grep the repo first to find them all)
 - [ ] Update `docs/OPEN-SOURCE-STRATEGY.md` references
 
 In `~/dilix-mcp`:

@@ -7,10 +7,10 @@
   "homepage": "https://dilix.ai",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erica-ownershiptheory/dilix-rent-control-engine.git"
+    "url": "git+https://github.com/dilix-ai/rent-control-engine.git"
   },
   "bugs": {
-    "url": "https://github.com/erica-ownershiptheory/dilix-rent-control-engine/issues"
+    "url": "https://github.com/dilix-ai/rent-control-engine/issues"
   },
   "keywords": [
     "rent-control",

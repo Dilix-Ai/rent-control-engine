@@ -23,7 +23,7 @@ decisions for real CRE investments — accuracy is non-negotiable.
 1. **Verify the issue against an authoritative source.** Acceptable
    sources: municipal code, official rent board publication, California
    Apartment Association chart, BLS regional CPI release.
-2. Open an issue using the [Data correction template](https://github.com/erica-ownershiptheory/dilix-rent-control-engine/issues/new?template=data_correction.yml)
+2. Open an issue using the [Data correction template](https://github.com/dilix-ai/rent-control-engine/issues/new?template=data_correction.yml)
    first — let's confirm the correction is needed before you write code.
 3. Open a PR referencing the issue.
 

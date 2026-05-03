@@ -26,5 +26,5 @@ This package contains regulatory data and computation logic only — no
 network calls, no credentials, no user input parsing beyond simple
 typed inputs. The most likely security concern is **incorrect data**
 producing wrong cap percentages used in financial decisions. Report
-those via the [Data correction template](https://github.com/erica-ownershiptheory/dilix-rent-control-engine/issues/new?template=data_correction.yml),
+those via the [Data correction template](https://github.com/dilix-ai/rent-control-engine/issues/new?template=data_correction.yml),
 not via this security channel.
