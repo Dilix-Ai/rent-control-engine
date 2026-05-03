@@ -1,0 +1,55 @@
+name: Bug report
+description: Report incorrect behavior in the resolver or types
+labels: ["bug"]
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Before filing, please confirm:
+        - You're on the latest version of `@dilix/rent-control-engine`
+        - The issue isn't a data correction (use the "Data correction" template instead)
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Property input
+      description: The full RentControlPropertyInput you passed
+      render: typescript
+      placeholder: |
+        {
+          city: "Oakland",
+          county: "Alameda",
+          state: "CA",
+          yearBuilt: 1970,
+          unitCount: 12,
+          propertyType: "multifamily_5plus"
+        }
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Minimal code that reproduces the issue
+      render: typescript
+    validations:
+      required: false

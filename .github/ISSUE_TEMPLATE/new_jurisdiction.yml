@@ -1,0 +1,47 @@
+name: New jurisdiction request
+description: Request encoding for a CA jurisdiction not yet covered (or a new state)
+labels: ["new-jurisdiction"]
+title: "[New] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Today the engine covers all 32 active CAA-chart jurisdictions in
+        California + AB-1482 statewide. Requests for additional CA cities
+        (where the local has adopted rent control after the 1/2026 chart
+        cutoff) or other states (NY, NJ, OR, MD, DC) are welcome.
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction
+      placeholder: "City, State"
+    validations:
+      required: true
+  - type: input
+    id: ordinance_url
+    attributes:
+      label: Ordinance URL
+      description: Link to the municipal code or rent board's published rule
+    validations:
+      required: true
+  - type: input
+    id: effective_date
+    attributes:
+      label: Effective date
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+  - type: textarea
+    id: formula
+    attributes:
+      label: Cap formula summary
+      description: How is the annual cap computed? (Flat %, CPI-based, period-published, etc.)
+    validations:
+      required: true
+  - type: textarea
+    id: eligibility
+    attributes:
+      label: Coverage / eligibility
+      description: Construction date cutoff, exemptions, property-type carveouts
+    validations:
+      required: false

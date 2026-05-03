@@ -1,0 +1,64 @@
+name: Data correction
+description: Report a wrong ordinance, citation, CPI reading, or computation
+labels: ["data-correction"]
+title: "[Data] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for keeping this engine accurate. **Every accepted correction
+        ships with the next release** and you'll be credited in CHANGELOG.md.
+
+        Before filing, please verify the issue against the official source
+        (municipal code, BLS reading, or California Apartment Association
+        chart) and link it below.
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction
+      placeholder: "Oakland, CA / Beverly Hills, CA / etc."
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: What's wrong
+      options:
+        - Annual cap percentage (current period)
+        - Cap formula or methodology
+        - Eligibility / construction-date cutoff
+        - Property-type exemption
+        - Citation (municipal code section)
+        - CPI reading
+        - Source URL
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What the engine currently returns
+      description: Paste the resolveRentCap output or just describe
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What the correct answer should be
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Authoritative source URL
+      description: Municipal code, BLS series page, or rent board publication
+      placeholder: "https://oakland.legistar.com/..."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Effective dates, recent amendments, edge cases
+    validations:
+      required: false
