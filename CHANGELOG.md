@@ -6,6 +6,22 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### Documentation
+
+- Documented projection-after-published-period fallback as a known
+  limitation in README and example 01. The cap returns `null` for
+  future dates past the ordinance's published cap window;
+  `projectRentCapImpact` falls through to market growth in those
+  years. Cumulative drag is *the floor*, not a worst-case.
+
+### Examples
+
+- Example 01 displays `cap=n/a (post-published)` for years past the
+  published period (was `cap=null%` — read as a bug).
+- Example 02 output comments updated to match current engine output:
+  Burlingame duplex now correctly shown as AB-1482 (6.3%) — duplexes
+  are not exempt under Costa-Hawkins absent separate alienability.
+
 ## [0.1.0] — 2026-05-03
 
 ### Added
