@@ -45,7 +45,7 @@ This is acceptable for an MVP that needs to match the CAA chart exactly. Long-te
 **Decision:** v0.1 covers only California. Out-of-state addresses return `source: "no_local_rule_no_ab1482"` with a warning.
 
 **Why:**
-- California has the most well-defined, citation-backed local rent control regime in the US (32 jurisdictions in the CAA chart, plus AB-1482 statewide).
+- California has the most well-defined, citation-backed local rent control regime in the US (39 jurisdictions in the CAA chart, plus AB-1482 statewide).
 - Other major states (NY rent stabilization, NJ at the municipal level, OR statewide cap, MD/DC) have very different structures. NY in particular requires DHCR registration data, which is a multi-month build on its own.
 - Shipping CA-only forces us to confront the hard problem (deterministic resolution + citations) on a complete dataset before generalizing.
 
@@ -64,7 +64,7 @@ This is acceptable for an MVP that needs to match the CAA chart exactly. Long-te
 
 ## ADR-6 — No DB; ordinances live in code
 
-**Decision:** All 32 ordinances are encoded as TypeScript literals in `src/ordinances.ts`. No SQL, no JSON file, no CMS.
+**Decision:** All 39 ordinances are encoded as TypeScript literals in `src/ordinances.ts`. No SQL, no JSON file, no CMS.
 
 **Why:**
 - Code is reviewable, version-controlled, and testable. A SQL row isn't.

@@ -141,7 +141,7 @@ export const CPI_READINGS: CPIReading[] = [
 
 /**
  * California county → AB-1482 CPI region. Drives statewide-fallback math
- * for jurisdictions outside the 32 CAA-chart cities.
+ * for jurisdictions outside the 39 CAA-chart cities.
  *
  * Source: BLS metro definitions + Civil Code §1947.12(h)(1) regional
  * reference language.

@@ -1,7 +1,7 @@
 {
   "name": "@dilix/rent-control-engine",
   "version": "0.1.0",
-  "description": "Resolve the maximum legal annual rent increase for any California property — local ordinance + AB-1482 statewide fallback + Costa-Hawkins exemption logic + multi-year NOI projection. 32 CA jurisdictions encoded with citations.",
+  "description": "Resolve the maximum legal annual rent increase for any California property — local ordinance + AB-1482 statewide fallback + Costa-Hawkins exemption logic + multi-year NOI projection. All 39 CAA-chart CA jurisdictions encoded with citations (36 active + 3 repealed/paused).",
   "license": "MIT",
   "author": "Dilix (Ownership Theory)",
   "homepage": "https://dilix.ai",

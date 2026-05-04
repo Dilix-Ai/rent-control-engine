@@ -1,6 +1,6 @@
 # `@dilix/rent-control-engine`
 
-Resolve the maximum legal annual rent increase for any California property — local ordinance, AB-1482 statewide fallback, Costa-Hawkins exemption logic, multi-year NOI projection. **32 California jurisdictions encoded with citations, all of them.**
+Resolve the maximum legal annual rent increase for any California property — local ordinance, AB-1482 statewide fallback, Costa-Hawkins exemption logic, multi-year NOI projection. **All 39 jurisdictions on the CAA "Local Rent Control Ordinances" chart (1/2026) encoded with citations — 36 active + 3 repealed/paused.**
 
 [![npm version](https://img.shields.io/npm/v/@dilix/rent-control-engine.svg?color=informational)](https://www.npmjs.com/package/@dilix/rent-control-engine)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
@@ -117,7 +117,7 @@ See [`examples/`](./examples) for three working scripts:
 
 ## Coverage
 
-**32 of 32 active CAA-chart California jurisdictions** (per the California Apartment Association "Local Rent Control Ordinances" chart, updated 1/2026):
+**36 of 36 active CAA-chart California jurisdictions** (per the California Apartment Association "Local Rent Control Ordinances" chart, updated 1/2026):
 
 > Alameda · Antioch · Baldwin Park · Bell Gardens · Berkeley · Beverly Hills · Commerce · Concord · Cudahy · Culver City · East Palo Alto · Gardena · Half Moon Bay · Hayward · Huntington Park · Inglewood · Larkspur · Los Angeles (City) · Los Angeles County (Unincorporated) · Los Gatos · Maywood · Mountain View · Oakland · Ojai · Oxnard · Palm Springs · Pasadena · Pomona · Richmond · Sacramento · San Francisco · San Jose · Santa Ana · Santa Monica · Thousand Oaks · West Hollywood
 

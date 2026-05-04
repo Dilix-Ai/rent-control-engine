@@ -7,7 +7,7 @@
  * the construction-date cutoff that determines whether the ordinance
  * even applies), citation, and source URL.
  *
- * Coverage: all 32 CAA-chart jurisdictions encoded — 29 active + 3
+ * Coverage: all 39 CAA-chart jurisdictions encoded — 36 active + 3
  * paused/repealed (Salinas, Fairfax, San Anselmo).
  *
  * Variants exercised: fixed_pct, cpi_formula (with floor/ceiling/lower-of/

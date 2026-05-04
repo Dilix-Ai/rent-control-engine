@@ -40,9 +40,9 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Added
 
 - Initial public release
-- 32 California rent control jurisdictions encoded from the California
+- All 39 California rent control jurisdictions on the California
   Apartment Association "Local Rent Control Ordinances" chart (updated
-  1/2026):
+  1/2026) — 36 active + 3 repealed/paused:
   - **Active:** Alameda, Antioch, Baldwin Park, Bell Gardens, Berkeley,
     Beverly Hills, Commerce, Concord, Cudahy, Culver City, East Palo
     Alto, Gardena, Half Moon Bay, Hayward, Huntington Park, Inglewood,

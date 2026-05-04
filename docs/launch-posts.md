@@ -18,7 +18,7 @@ person, direct), not corporate. Don't sound like a press release.
 ```
 Hey HN — I built this because most CRE underwriting models assume 3-4% rent growth on properties that legally can't grow rents above 1%, and the gap compounds.
 
-`@dilix/rent-control-engine` resolves the maximum legal annual rent increase for any California property — local ordinance, AB-1482 statewide fallback, Costa-Hawkins exemption logic, multi-year NOI projection. 32 California jurisdictions encoded with citations.
+`@dilix/rent-control-engine` resolves the maximum legal annual rent increase for any California property — local ordinance, AB-1482 statewide fallback, Costa-Hawkins exemption logic, multi-year NOI projection. All 39 CAA-chart California jurisdictions encoded with citations (36 active + 3 repealed/paused).
 
 The headline:
 
@@ -64,7 +64,7 @@ That gap — 320 bps a year — compounds across a 5-year hold to roughly $52K o
 
 CoreLogic and ATTOM sell you "rent controlled: true/false." That's not actionable. You need the rate, the citation, and the math behind it, otherwise you can't defend the number to your investors.
 
-So I built it. MIT licensed. 32 California jurisdictions, every cap formula variant in the CAA chart, citations on every output.
+So I built it. MIT licensed. All 39 CAA-chart California jurisdictions, every cap formula variant, citations on every output.
 
 This is the first open-source piece of the Dilix stack. The engine is what customers can audit; the data dossiers and AI-agent envelope are what they pay for.
 
@@ -100,7 +100,7 @@ Not actionable. You need the rate, the citation, and the formula behind it — o
 
 This package handles all of that.
 
-4/ Coverage: 32 of 32 active CA jurisdictions per the CAA chart.
+4/ Coverage: 36 of 36 active CA jurisdictions per the CAA chart (plus 3 repealed/paused that fall through to AB-1482).
 
 Plus AB-1482 statewide fallback. Plus Costa-Hawkins exemption logic. Plus 8 cap-formula variants encoded as a TypeScript discriminated union — fixed_pct, cpi_formula, flat_plus_cpi, published_periods, etc.
 
@@ -134,7 +134,7 @@ Three sections suggested:
 **r/realestateinvesting** (subreddit rules permitting; if not, just answer questions in active threads with the GitHub link):
 
 ```
-Built an open-source TypeScript package that resolves the max legal rent increase for any California property — 32 jurisdictions encoded with citations, sub-1ms.
+Built an open-source TypeScript package that resolves the max legal rent increase for any California property — all 39 CAA-chart jurisdictions encoded with citations, sub-1ms.
 
 If you've ever underwritten a deal in CA at 4% rent growth assumption and it turned out the cap was 0.8%, this is for you.
 
@@ -155,7 +155,7 @@ Subject: I just open-sourced the rent control engine
 
 I've been writing about regulatory drag in CRE for months. Today I open-sourced the tool that surfaces it.
 
-@dilix/rent-control-engine resolves the maximum legal annual rent increase for any California property — local ordinance, AB-1482 fallback, Costa-Hawkins exemption logic, multi-year NOI projection. 32 California jurisdictions encoded, citations on every output, MIT licensed.
+@dilix/rent-control-engine resolves the maximum legal annual rent increase for any California property — local ordinance, AB-1482 fallback, Costa-Hawkins exemption logic, multi-year NOI projection. All 39 CAA-chart California jurisdictions encoded, citations on every output, MIT licensed.
 
 Why open source: institutional CRE needs to audit the math. Vendors carry "rent controlled: true/false" booleans without rates or citations. This fills that gap.
 

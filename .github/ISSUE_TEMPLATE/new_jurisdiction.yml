@@ -6,8 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Today the engine covers all 32 active CAA-chart jurisdictions in
-        California + AB-1482 statewide. Requests for additional CA cities
+        Today the engine covers all 39 CAA-chart jurisdictions in
+        California (36 active + 3 repealed/paused) + AB-1482 statewide.
+        Requests for additional CA cities
         (where the local has adopted rent control after the 1/2026 chart
         cutoff) or other states (NY, NJ, OR, MD, DC) are welcome.
   - type: input
