@@ -68,9 +68,11 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - `findOrdinance(jurisdiction)` — lookup by jurisdiction string
 - `getCPIReading(region, asOfDate)` and `getCPIRegionForCounty(county)`
   for CPI helpers
-- 37 tests covering every formula variant, edge case, and Erica's
-  reference data points (San Mateo 6.3%, Oakland 0.8% current period,
-  San Francisco 1.4% current period)
+- 37 tests covering every formula variant, edge case, and reference
+  data points: San Mateo 6.3% (AB-1482 fallback), Oakland 0.8%
+  (period 8/1/25-7/31/26), SF 1.4% (period 3/1/25-2/28/26) and
+  1.6% (period 3/1/26-2/28/27). Tests pin `asOfDate` so SF
+  assertions hold across period rollovers.
 
 ### Known limitations
 
