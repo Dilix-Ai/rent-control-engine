@@ -32,9 +32,18 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Verify build output
+      - name: Verify dual build output
         run: |
-          test -f dist/index.js
-          test -f dist/index.d.ts
-          test -f dist/resolver.js
-          test -f dist/ordinances.js
+          test -f dist/esm/index.js
+          test -f dist/esm/index.d.ts
+          test -f dist/esm/resolver.js
+          test -f dist/esm/ordinances.js
+          test -f dist/cjs/index.js
+          test -f dist/cjs/resolver.js
+          test -f dist/cjs/ordinances.js
+          test -f dist/cjs/package.json
+
+      - name: Smoke-test ESM and CJS entry points
+        run: |
+          node -e "import('./dist/esm/index.js').then(m => { if (typeof m.resolveRentCap !== 'function') throw new Error('ESM export broken'); console.log('ESM OK'); })"
+          node -e "const m = require('./dist/cjs/index.js'); if (typeof m.resolveRentCap !== 'function') throw new Error('CJS export broken'); console.log('CJS OK');"
